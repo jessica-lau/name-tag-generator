@@ -1,22 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import NameTag from "./NameTag.js";
-import { names } from "./data.js";
 import "./styles.css";
 
 
-var renderNameTag = name => <NameTag key={name.id} name={name.individualname} />;
+var renderNameTag = name => <NameTag key={name} name={name} />;
 
-
-var App = () => {
-    var NameTagElements = names.map(renderNameTag);
-
-    return (
-        <div className="App">
-            <h1>Name Tag Generator</h1>
-            {NameTagElements}
-        </div>
-    );
+class App extends Component {
+    state = { names: ["Jessica", "YB", "Cooper", "Gisella", "Carter", "Oakley", "Hazel"] };
+    render() {
+        var NameTagElements = this.state.names.map(renderNameTag);
+        return (
+            <div className="App">
+                <h1>Name Tag Generator</h1>
+                {NameTagElements}
+            </div>
+        );
+    }
 };
 
 var rootElement = document.getElementById("root");
