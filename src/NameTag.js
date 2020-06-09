@@ -8,7 +8,6 @@ var NameTag = props => {
       <p className='subtitle'>my name is</p>
       <h2 className='name'>{props.name}</h2>
       <span onClick={deleteByIndex} className='name-tag__delete'>
-        x
       </span>
     </div>
   );
