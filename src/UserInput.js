@@ -5,9 +5,7 @@ class UserInput extends Component {
         name: ""
     };
 
-    updateName = event => {
-        this.setState({ name: event.target.value });
-    };
+    updateName = event => this.setState({ name: event.target.value });
 
     handleSubmit = event => {
         event.preventDefault();
@@ -21,7 +19,7 @@ class UserInput extends Component {
                 <input type="submit" value="Create Name Tag" />
             </form>
         );
-    }
+    };
 };
 
 export default UserInput;
