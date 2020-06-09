@@ -1,29 +1,58 @@
 .App {
-    font-family: sans-serif;
-    text-align: center;
-  }
-  .name-tag {
-    background-color: purple;
-    padding: 10px 0 20px;
-    border-radius: 20px;
-    width: 350px;
-    margin: 20px 10px;
-    display: inline-block;
-  }
-  .title {
-    color: white;
-    margin: 0;
-    font-size: 40px;
-  }
-  .subtitle {
-    color: white;
-    margin: 0;
-  }
-  .name {
-    background-color: white;
-    margin: 10px 0;
-    font-size: 60px;
-    height: 90px;
-    font-family: "Permanent Marker", Arial, Helvetica, sans-serif;
-  }
-  
+  font-family: sans-serif;
+  text-align: center;
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+input[type="text"] {
+  width: 200px;
+}
+
+.name-tag {
+  background-color: purple;
+  padding: 10px 0 20px;
+  border-radius: 20px;
+  width: 350px;
+  margin: 20px 10px;
+  display: inline-block;
+
+}
+
+.title {
+  color: white;
+  margin: 0;
+  font-size: 40px;
+}
+
+.subtitle {
+  color: white;
+  margin: 0;
+}
+
+.name {
+  background-color: white;
+  margin: 10px 0;
+  font-size: 60px;
+  height: 90px;
+  font-family: "Permanent Marker", Arial, Helvetica, sans-serif;
+}
+
+h2 .name {
+color: black;
+}
+
+.name-tag__delete {
+  padding: 5px 8px;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+.name-tag__delete:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}

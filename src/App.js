@@ -12,11 +12,15 @@ class App extends Component {
     var newNames = this.state.names.filter(filterCallback);
     this.setState({ names: newNames });
   };
+  addName = name => {
+    var newNames = [name, ...this.state.names];
+    this.setState({names: newNames});
+  };
   render() {
     return (
       <div className='App'>
         <h1>Name Tag Generator</h1>
-        <UserInput />
+        <UserInput addName={this.addName} />
         <NameTagList names={this.state.names} removeName={this.removeName} />
       </div>
     );
