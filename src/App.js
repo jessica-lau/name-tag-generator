@@ -14,8 +14,21 @@ class App extends Component {
   };
   addName = name => {
     var newNames = [name, ...this.state.names];
-    this.setState({names: newNames});
+    this.setState({ names: newNames });
   };
+  componentDidUpdate() {
+    var savedNamesString = JSON.stringify(this.state.names);
+    localStorage.setItem("savedNames", savedNamesString);
+  };
+
+  componentDidMount() {
+    var savedNamesString = localStorage.getItem("savedNames");
+    if (savedNamesString) {
+      var savedNames = JSON.parse(savedNamesString);
+      this.setState({names: savedNames});
+    }
+  };
+
   render() {
     return (
       <div className='App'>
